@@ -25,8 +25,11 @@ SECRET_KEY = "django-insecure-vld^9b*t5%=aw18a=e93ml=)ipu=#sdpo$&aba$k61r8=%$@#e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['crud-django-lfga.onrender.com', 'localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['crud-django-lfga.onrender.com', 'localhost', '127.0.0.1']
 
+import os
+
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'crud-django-lfga.onrender.com,localhost,127.0.0.1').split(',')
 
 
 # Application definition
