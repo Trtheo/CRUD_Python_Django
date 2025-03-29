@@ -11,10 +11,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security settings
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-key-for-dev-only')
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG=False
+# DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    'crud-django-lfga.onrender.com',
+    
     'crud-07ui.onrender.com',
     'localhost',
     '127.0.0.1'
